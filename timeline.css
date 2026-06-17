@@ -324,3 +324,25 @@
 .tl-card:has(.tl-video) .tl-popup {
   width: 380px;
 }
+/* ── Thumbnail in preview card ── */
+.tl-card.has-thumb .tl-preview {
+  padding: 0;
+}
+
+.tl-thumb {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius) var(--radius) 0 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.tl-card.has-thumb .tl-year,
+.tl-card.has-thumb .tl-title,
+.tl-card.has-thumb .tl-game {
+  padding: 0 20px;
+}
+
+.tl-card.has-thumb .tl-year { padding-top: 14px; }
+.tl-card.has-thumb .tl-game { padding-bottom: 14px; }
