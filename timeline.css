@@ -304,31 +304,10 @@
     display: block;
   }
 }
-.tl-video {
-  margin-top: 12px;
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 ratio */
-  height: 0;
-  overflow: hidden;
-  border-radius: 3px;
-}
 
-.tl-video iframe {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* Widen the popup when it has a video */
-.tl-card:has(.tl-video) .tl-popup {
-  width: 380px;
-}
-/* ── Thumbnail in preview card ── */
-.tl-card.has-thumb .tl-preview {
-  padding: 0;
-}
-
+/* ─────────────────────────────────────────
+   THUMBNAIL IN PREVIEW CARD
+───────────────────────────────────────── */
 .tl-thumb {
   width: 100%;
   height: 120px;
@@ -338,11 +317,43 @@
   border-bottom: 1px solid var(--border);
 }
 
-.tl-card.has-thumb .tl-year,
-.tl-card.has-thumb .tl-title,
-.tl-card.has-thumb .tl-game {
+.tl-card.has-thumb .tl-preview {
+  padding: 0;
+}
+
+.tl-card.has-thumb .tl-year {
+  display: block;
+  padding: 14px 20px 0;
+}
+
+.tl-card.has-thumb .tl-title {
   padding: 0 20px;
 }
 
-.tl-card.has-thumb .tl-year { padding-top: 14px; }
-.tl-card.has-thumb .tl-game { padding-bottom: 14px; }
+.tl-card.has-thumb .tl-game {
+  padding: 0 20px 14px;
+}
+
+/* Widen popup when it contains a video */
+.tl-card.has-thumb .tl-popup {
+  width: 380px;
+}
+
+/* Video embed inside popup */
+.tl-video {
+  margin-top: 12px;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.tl-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
